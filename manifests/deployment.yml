@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: prakashktomcatdockerdockerfile 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prakashktomcatdockerdockerfile
+  template:
+    metadata:
+      labels:
+        app: prakashktomcatdockerdockerfile 
+    spec:
+      containers:
+        - name: prakashktomcatdockerdockerfile 
+          image: myacr123prakash.azurecr.io/prakashktomcatdockerdockerfile
+          ports:
+          - containerPort: 8080
